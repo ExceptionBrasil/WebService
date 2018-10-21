@@ -3,7 +3,7 @@ Pequeno WebService em JavaScript e Ajax, com um callback.
 
 ## Objetivo 
 Esse pequeno WebService tem por objetivo facilitar a execução assincrona, de requests ao servidor.
-através de uma requisição POST.
+através de uma requisição POST,GET,PUT.
 
 ## Dependências
 * Jquery
@@ -70,5 +70,6 @@ var callBack = function(response){
 ```
 
 Variáveis que são tratadas de forma automáticas, alem do callback.
-* success - Obrigatório. O callback só é executado se essa propriedade existir na sua resposta
+* success - Passou a ser opcional e transfere para o callback seu tratamento ou não 
 * menssage - Opcional. Quando informado, replica a mensagem no console.log, alêm de ser utilizável no callback.
+
