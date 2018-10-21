@@ -70,6 +70,6 @@ var callBack = function(response){
 ```
 
 Variáveis que são tratadas de forma automáticas, alem do callback.
-* success - Passou a ser opcional e transfere para o callback seu tratamento ou não 
+* success - Passou a ser opcional, quando existir imprime no console.log um aviso de Success! e executa o callback
 * menssage - Opcional. Quando informado, replica a mensagem no console.log, alêm de ser utilizável no callback.
 
