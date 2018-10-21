@@ -63,36 +63,24 @@ var WebService = (
 
                 //Testa se há um success no retorno do servidor
                 if (typeof(response.success) == "undefined") {
-                    console.log("Response object is missim the property [bool:success]");
-                    if (typeof (response.menssage) != "undefined"){
-                        console.log(response.menssage);
-                    }
-
-                    if (typeof (callBack != "undefined")) {
-                        callBack(response);
-                    }
-                    return;
+                    console.log("Response object is missim the property [bool:success] | WebService.js");
+                }else{
+                    console.log("Success! | WebService.js ")
+                }
+                
+                if (typeof (response.menssage) != "undefined"){
+                    console.log(response.menssage);
+                }else{
+                    console.log("response.menssage not found, no problem on that! | WebService.js ")
                 }
 
-                //Se houve sucesso ou não server-side executa o callback, caso exista
-                if (response.success) {
-                    if (typeof(response.menssage) != "undefined"){
-                        console.log(response.menssage);
-                    }
 
-                    if (typeof(callBack != "undefined")) {
-                        callBack(response);
-                    }
-
-                    
-                } else {
-                    if (typeof(response.menssage) != "undefined") {
-                        console.log(response.menssage);
-                    }
-                    if (typeof(callBack != "undefined")) {
-                        callBack(response);
-                    }
+                if (typeof (callBack != "undefined")) {
+                    callBack(response);
+                }else{
+                    console.log("callback do not exists, no problem on that! | WebService.js")
                 }
+                                
             }).catch((e) => {
                 console.log("Invalid return from server, or the server is missing, way, gone, caputs, GAME OVER!!!!!.");
             });            
