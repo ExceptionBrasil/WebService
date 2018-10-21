@@ -44,7 +44,7 @@ Faça a chamada do WebService em seu script personalizado, conforme o exemplo ab
 //Crie um objeto qualquer, por exemplo esse abaixo:
 var objetoQualquer = {
         id:1,
-        descricao:"Uma descrição qualquer,
+        descricao:"Uma descrição qualquer",
         valor: 1000
     };
 
