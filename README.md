@@ -62,11 +62,16 @@ var callBack = function(response){
     }else{
         console.log("Processamento no Servidor Não OK");
     }
-}
+}   
+    //Método de envio
+    var methodType="post"
+    
+    //Tipo de objeto enviado
+    var dataType="json"
 
     //Chama o webservice passando o callback 
     //Faça a chamada do WebService 
-    WebService.Init(obj, urlDestino, callBack);
+    WebService.Init(obj, urlDestino, callBack,methodType,dataType);
 ```
 
 Variáveis que são tratadas de forma automáticas, alem do callback.
